@@ -1,0 +1,36 @@
+import java.util.*;
+class Solution {
+    public static boolean isPalindrome(int x) {
+        int or=x;
+        int re=or;
+        int rem=0;
+        int va=0;
+        if(or<0){
+            return false;
+        }
+        else{
+        while(or!=0){
+            rem=or%10;
+            va=(va*10)+rem;
+            or=or/10;
+        }
+        if(va==re){
+            return true;
+        }
+        else{
+            return false;
+        }
+        }
+    }
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        boolean a=isPalindrome(n);
+        if(a==true){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+    }
+}
